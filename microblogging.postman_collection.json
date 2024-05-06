@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "da29f7b2-e6e2-423c-8279-a4c5accdb4bf",
+		"name": "microblogging",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31868235"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get all posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "user profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update user profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get all followers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/users/1/followers"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "get all posts",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "create new post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/posts/"
+					},
+					"response": []
+				},
+				{
+					"name": "get post of specific user",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
