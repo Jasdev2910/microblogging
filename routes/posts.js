@@ -1,22 +1,18 @@
 const express = require("express");
 const router = express.Router();
+const {
+  getUserPosts,
+  getAllPosts,
+  createPost,
+} = require("../controllers/postsController");
 
 // get all posts
-router.get("/", (req, res) => {
-  console.log("Fetching all posts");
-  res.send("Fetching all posts");
-});
+router.get("/", getUserPosts);
 
 // create a new post
-router.post("/", (req, res) => {
-  console.log("Creating a post");
-  res.send("Creating a post");
-});
+router.post("/", createPost);
 
 // get post of specific user
-router.get("/:userId", (req, res) => {
-  console.log("getting all post of a specific user");
-  res.send("getting all post of a specific user");
-});
+router.get("/:userId", getAllPosts);
 
 module.exports = router;

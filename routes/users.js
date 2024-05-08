@@ -1,28 +1,21 @@
 const express = require("express");
 const router = express.Router();
-
+const {
+  getUser,
+  updateUser,
+  getUserFollowers,
+  createUser,
+} = require("../controllers/usersController");
 // create user
-router.post("/", (req, res) => {
-  console.log("user created successfully");
-  res.send("user created successfully");
-});
+router.post("/", createUser);
 
 // user profile
-router.get("/:userId", (req, res) => {
-  console.log("Fetching details for user");
-  res.send("Fetching details for user");
-});
+router.get("/:userId", getUser);
 
 // update user profile
-router.put("/:userId", (req, res) => {
-  console.log("Updating user");
-  res.send("User Updated");
-});
+router.put("/:userId", updateUser);
 
 //  get followers of specific user
-router.get("/:userId/followers", (req, res) => {
-  console.log("Getting all the followers");
-  res.send("Getting all the followers");
-});
+router.get("/:userId/followers", getUserFollowers);
 
 module.exports = router;
